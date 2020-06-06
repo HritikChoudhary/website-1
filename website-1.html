@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Layout-1</title>
+    <link rel="stylesheet" href="webfonts/icons.css">
+  
+    <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:Arial, Helvetica, sans-serif; 
+             }
+
+        /* HEADER PART START */
+        .header {
+            width: 100%;
+            height: 100vh;
+            float: right;
+            background-image: url(comp1.jpg);
+            background-size: cover;
+        }
+
+        .header:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: open-quote;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.1));
+        }
+
+        .logo {
+            width: 30%;
+            float: left;
+            font-family:monospace;
+            padding: 20px;
+        }
+
+        .logo a {
+            position: relative;
+            z-index: 1;
+            margin: 45px;
+            font-size: 25px;
+            color: white;
+            text-decoration: none;
+            border-bottom: 3px inset white;
+            border-right: 3px inset white;
+            padding: 10px;
+        }
+
+        .logo a:hover {
+            font-size: 28px;
+            color: whitesmoke;
+            transition: 1s all;
+            padding: 5px 10px;
+            border-top: 3px outset white;
+            border-left: 3px outset white;
+            border-bottom: 5px outset white;
+            border-right: 5px outset white;
+
+        }
+
+        .navigation {
+            width: 70%;
+            font-size: 25px;
+            float: right;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .navigation ul {
+            float: center;
+        }
+
+        .navigation ul li {
+            list-style-type: none;
+            float: left;
+            padding: 12px;
+            padding-right: 45px;
+        }
+
+        .navigation ul li a {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-decoration: none;
+            transition: all 1s;
+        }
+
+        .navigation ul li a:hover {
+            color: white;
+            padding: 10px;
+            border-bottom: 1px inset white;
+            border-right: 2px inset white;
+            border-bottom-right-radius: 20px;
+
+
+        }
+
+        .button1 {
+            float: right;
+            padding-top: 12px;
+        }
+
+        .button1 a {
+            position: relative;
+            z-index: 1;
+            background-color: white;
+            color: grey;
+            width: 90px;
+            text-align: center;
+            padding: 2px 2px 2px;
+            text-decoration: none;
+        }
+
+        .button1 a:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+            color: whitesmoke;
+        }
+
+        .middle {
+            padding-top: 150px;
+            float: left;
+            position: relative;
+
+        }
+
+        .mid-part-text {
+            width: 600px;
+            height: 200px;
+            padding: 10px;
+            transition: all 1s;
+        }
+
+        .mid-part-text:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-bottom: 1px outset white;
+            border-left: 1px outset white;
+            border-top: 1px outset white;
+            border-right: 1px outset white;
+            border-bottom-left-radius: 50px;
+            border-top-right-radius: 50px;
+
+
+        }
+
+        .middle h1 {
+            text-align: center;
+            font-size: 45px;
+            color: white;
+            position: relative;
+            z-index: 1;
+
+        }
+
+        .middle h1:hover {
+            color: whitesmoke;
+            transition: 1s all;
+        }
+
+        .middle p {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            font-size: 22px;
+            color: white;
+            padding-top: 12px;
+        }
+
+        .middle p:hover {
+            color: whitesmoke;
+            transition: 1s all;
+        }
+
+        .button2 {
+            width: 300px;
+            background-color: white;
+            position: absolute;
+            left: 28%;
+            top: 76%;
+            z-index: 1;
+            text-align: center;
+            font-size: 25px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        button {
+            color: grey;
+            transition: all 1s;
+        }
+
+        button:hover {
+            color: white;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-bottom: 3px outset white;
+            border-right: 3px outset white;
+            border-top: 3px outset white;
+            border-left: 3px outset white;
+
+            border-bottom-right-radius: 20px;
+            border-top-left-radius: 20px;
+        }
+
+
+        /* HEADER PART END */
+        /* CONTENT START */
+        .content {
+            position: relative;
+        }
+
+        .text {
+            position: absolute;
+            top: 700px;
+            left: 150px;
+            width: 80%;
+            height: 300px auto;
+            text-align: center;
+
+        }
+
+        .text h1 {
+            text-align: center;
+            padding: 20px;
+            font-size: 45px;
+        }
+
+        .text p {
+            text-align: center;
+            font-size: 22px;
+        }
+
+        .container {
+            width: 100%;
+            position: absolute;
+            top: 1000px;
+            display: grid;
+            grid-template-rows: 300px;
+            grid-template-columns: repeat(3, 300px);
+            grid-gap: 30px;
+            justify-content: center;
+            background-color: white;
+        }
+
+        .div1 {
+            background-color: ghostwhite;
+            font-size: 40px;
+            color: rosybrown;
+            text-align: center;
+            padding-top: 20px;
+            border-radius: 500px;
+            border-bottom: 2px inset grey;
+            border-right: 2px inset grey;
+        }
+
+        .div1 i {
+            background-color: white;
+            padding: 10px;
+            border-radius: 50px;
+            text-align: center;
+            border-right: 1px inset rosybrown;
+            border-bottom: 2px inset rosybrown;
+        }
+
+        .div1 h3 {
+            font-size: 20px;
+            color: grey;
+            padding-top: 10px;
+        }
+
+        .div1 p {
+            font-size: 15px;
+            color: darkgrey;
+        }
+
+        .div2 {
+            background-color: ghostwhite;
+            font-size: 40px;
+            color: dimgrey;
+            text-align: center;
+            padding-top: 20px;
+            border-radius: 500px;
+            border-bottom: 2px inset grey;
+            border-right: 2px inset grey;
+        }
+
+        .div2 i {
+            background-color: white;
+            padding: 10px;
+            border-radius: 50px;
+            text-align: center;
+            border-right: 1px inset dimgrey;
+            border-bottom: 2px inset dimgrey;
+        }
+
+        .div2 h3 {
+            font-size: 20px;
+            color: grey;
+            padding-top: 10px;
+        }
+
+        .div2 p {
+            font-size: 15px;
+            color: darkgrey;
+        }
+
+        .div3 {
+            background-color: ghostwhite;
+            font-size: 40px;
+            color: goldenrod;
+            text-align: center;
+            padding-top: 20px;
+            border-radius: 500px;
+
+            border-bottom: 2px inset grey;
+            border-right: 2px inset grey;
+
+        }
+
+        .div3 i {
+            background-color: white;
+            padding: 10px;
+            border-radius: 50px;
+            text-align: center;
+            border-right: 1px inset goldenrod;
+            border-bottom: 2px inset goldenrod;
+        }
+
+        .div3 h3 {
+            font-size: 20px;
+            color: grey;
+            padding-top: 10px;
+        }
+
+        .div3 p {
+            font-size: 15px;
+            color: darkgrey;
+        }
+
+        /* CONTENT END */
+        /* INFORMATION START */
+        .information {
+            position: relative;
+            top: 750px;
+            text-align: center;
+        }
+
+        .text1 h1 {
+            font-size: 30px;
+            padding-bottom: 10px;
+
+        }
+
+        .text1 p {
+            font-size: 20px;
+            padding-top: 10px;
+        }
+
+        .container1 {
+            width: 100%;
+            position: relative;
+            top: 50px;
+            display: grid;
+            grid-template-rows: 200px;
+            grid-template-columns: repeat(4, 300px);
+            grid-gap: 20px;
+            justify-content: center;
+        }
+
+        .div11 {
+            background-color: lightgrey;
+            padding: 15px;
+            text-align: center;
+            border-top-left-radius: 50px;
+            border-right: 2px inset darkgrey;
+            border-bottom: 2px inset darkgrey;
+        }
+
+        .div11 i {
+            font-size: 28px;
+            color: dimgray;
+        }
+
+        .div11 h3 {
+            font-size: 22px;
+            padding-top: 15px;
+        }
+
+        .div11 p {
+            font-size: 15px;
+            padding-top: 10px;
+        }
+
+        .div12 {
+            background-color: lightgrey;
+            padding: 15px;
+            text-align: center;
+            border-top-left-radius: 50px;
+            border-right: 2px inset darkgrey;
+            border-bottom: 2px inset darkgrey;
+        }
+
+        .div12 i {
+            font-size: 28px;
+            color: dimgray;
+        }
+
+        .div12 h3 {
+            font-size: 22px;
+            padding-top: 15px;
+        }
+
+        .div12 p {
+            font-size: 15px;
+            padding-top: 10px;
+        }
+
+        .div12 h4 {
+            font-size: 18px;
+            padding-top: 15px;
+        }
+
+        .div13 {
+            background-color: lightgrey;
+            padding: 15px;
+            text-align: center;
+            border-top-left-radius: 50px;
+            border-right: 2px inset darkgrey;
+            border-bottom: 2px inset darkgrey;
+        }
+
+        .div13 i {
+            font-size: 28px;
+            color: dimgray;
+        }
+
+        .div13 h3 {
+            font-size: 22px;
+            padding-top: 15px;
+        }
+
+        .div13 p {
+            font-size: 15px;
+            padding-top: 10px;
+        }
+
+        .div13 h4 {
+            font-size: 18px;
+            padding-top: 15px;
+        }
+
+        .div11 h4 {
+            font-size: 18px;
+            padding-top: 15px;
+        }
+
+        .div14 {
+            background-color: lightgrey;
+            padding: 15px;
+            text-align: center;
+            border-top-left-radius: 50px;
+            border-right: 2px inset darkgrey;
+            border-bottom: 2px inset darkgrey;
+        }
+
+        .div14 i {
+            font-size: 28px;
+            color: dimgray;
+        }
+
+        .div14 h3 {
+            font-size: 22px;
+            padding-top: 15px;
+        }
+
+        .div14 p {
+            font-size: 15px;
+            padding-top: 10px;
+        }
+
+        .div14 h4 {
+            font-size: 18px;
+            padding-top: 15px;
+        }
+
+
+        /* INFORMATION END */
+        /*FOOTER START*/
+        .footer {
+            position: relative;
+            top: 1000px;
+            background-color: aliceblue;
+        }
+
+        .foot {
+            text-align: center;
+            padding: 15px;
+
+        }
+
+        .foot i {
+            margin: 10px;
+            font-size: 20px;
+            padding: 15px 15px;
+            background-color: darkslategray;
+            color: white;
+            border-radius: 100px;
+        }
+
+        .foot i:hover {
+            color: darkslategray;
+            background-color: white;
+
+        }
+
+        .foot li {
+            font-size: 20px;
+            list-style-type: none;
+            display: inline-flex;
+            padding-left: 45px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .foot li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .foot li a:hover {
+            font-weight: bold;
+            text-decoration: underline;
+            color: darkslategray;
+        }
+
+        .foot1 {
+            background-color: darkslategray;
+
+        }
+
+        .foot1 p {
+            padding: 10px;
+            color: whitesmoke;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .foot1 pre {
+            padding: 0 0 10px;
+            color: gray;
+            font-size: 20px;
+            text-align: center;
+            font-family: serif;
+        }
+
+        .foot1 pre:hover {
+            color: darkgray;
+        }
+
+        .arrow {
+            position: fixed;
+            top: 500px;
+            right: 10px;
+            transition: 1s all;
+        }
+
+        .arrow a i {
+            color: dimgray;
+            background-color: lightgray;
+            padding: 20px;
+            font-size: 20px;
+            border-radius: 1000px;
+        }
+
+        .arrow a i:hover {
+            color: lightgray;
+            background-color: dimgray;
+
+        }
+
+
+        /*FOOTER END*/
+
+
+        @media screen and (max-width:720px) {
+            * {
+                font-family: serif;
+            }
+
+            .header {
+                width: 100%;
+                height: 60vh;
+            }
+
+            .logo {
+                width: 100%;
+                padding: 0;
+            }
+
+            .logo a {
+                margin: 5px;
+                font-size: 15px;
+                padding: 5px;
+                border-bottom: 1px inset white;
+                border-right: 1px inset white;
+            }
+
+            .logo a:hover {
+                font-size: 17px;
+                transition: 1s all;
+                padding: 2px 5px;
+                border-top: 1px outset white;
+                border-left: 1px outset white;
+                border-bottom: 2px outset white;
+                border-right: 2px outset white;
+
+            }
+
+            .navigation {
+                width: 100%;
+                font-size: 15px;
+                float: left;
+
+
+            }
+
+            .navigation ul {
+                float: left;
+            }
+
+            .navigation ul li {
+                list-style-type: none;
+                float: left;
+                padding: 2px;
+                padding-right: 8px;
+            }
+
+            .navigation ul li a {
+                position: relative;
+                z-index: -1;
+                color: white;
+                text-decoration: none;
+            }
+
+            .navigation ul li a:hover {
+                color: lightblue;
+
+                text-decoration: underline;
+                padding: 0px;
+                border-bottom: 0px inset white;
+                border-right: 0px inset white;
+                border-bottom-right-radius: 0px;
+
+            }
+
+            .button1 {
+                padding-top: 0px;
+            }
+
+            .middle {
+                padding-top: 40px;
+                padding-left: 25px;
+            }
+
+            .mid-part-text {
+                width: 300px;
+                height: 150px;
+                padding: 5px;
+            }
+
+            .middle h1 {
+                font-size: 28px;
+            }
+
+            .middle h1:hover {
+                font-size: 25px;
+            }
+
+            .middle p {
+                font-size: 20px;
+                padding-top: 8px;
+            }
+
+            .middle p:hover {
+                font-size: 20px;
+            }
+
+            .button2 {
+                width: 200px;
+                left: 24%;
+                top: 76%;
+                font-size: 15px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+
+            button:hover {
+                border-bottom: 2px outset white;
+                border-right: 2px outset white;
+                border-top: 2px outset white;
+                border-left: 2px outset white;
+            }
+
+            .text {
+                position: absolute;
+                top: 400px;
+                left: 0;
+                width: 100%;
+                height: 300px auto;
+                background-color: white;
+                padding: 10px 15px;
+
+            }
+
+            .text h1 {
+                padding-top: 40px;
+                padding-bottom: 10px;
+                font-size: 25px;
+            }
+
+            .text h1:hover {
+
+                border-left: 15px solid grey;
+                border-top: 15px solid white;
+            }
+
+            .text p {
+                font-size: 20px;
+            }
+
+            .container {
+                top: 950px;
+                display: grid;
+                grid-template-rows: 300px repeat(3, 300px);
+                grid-template-columns: 300px;
+
+            }
+
+            .div1 {
+                border-radius: 0px;
+                padding: 20px;
+                border-bottom: 2px inset grey;
+                border-right: 2px inset grey;
+            }
+
+            .div2 {
+                border-radius: 0px;
+                padding: 20px;
+            }
+
+            .div3 {
+                border-radius: 0px;
+            }
+
+            /*information start*/
+
+            .information {
+                position: relative;
+                top: 1600px;
+                text-align: center;
+            }
+
+            .text1 h1 {
+                font-size: 20px;
+                padding-bottom: 10px;
+
+            }
+
+            .text1 p {
+                font-size: 18px;
+                padding: 10px;
+            }
+
+            .container1 {
+                display: grid;
+                grid-template-rows: repeat(4, 200px);
+                grid-template-columns: 300px;
+                grid-gap: 20px;
+                justify-content: center;
+            }
+
+            .footer {
+                position: relative;
+                top: 1800px;
+                background-color: aliceblue;
+            }
+
+            .foot {
+                text-align: center;
+                padding: 15px;
+
+            }
+
+            .foot i {
+                margin: 5px;
+                font-size: 15px;
+                padding: 10px 10px;
+            }
+
+            .foot li {
+                font-size: 18px;
+                padding-left: 10px;
+            }
+
+            .foot li a {
+                text-decoration: none;
+                color: darkslategray;
+            }
+
+            .foot1 p {
+                font-size: 18px;
+            }
+
+            .foot1 pre {
+                padding: 0 0 8px;
+                font-size: 18px;
+            }
+
+    </style>
+</head>
+
+<body>
+    <!--HEADER PART START-->
+    <div class="header">
+        <div class="logo">
+            <h1><a href="#" style="font-family: fantasy"> @RajaS~</a></h1>
+        </div>
+        <div class="navigation">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Details</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+            <div class="button1">
+                <a href="#">Sign Up</a>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="mid-part-text">
+                <h1>Hii!! Hritik Choudhary </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                <button class="button2">Sign Up</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!--HEADER PART END-->
+    <!--MAIN PAGE START-->
+    <div class="content">
+        <div class="text">
+            <h1>~ ~ Lorem ipsum dolor ~ ~</h1>
+            <p>licabo consequuntur doloribus smodi deleniti in luptatibus Lorem ipsum dolor sit amet, consectetur adipisicing elit. bus nihil itaque earum, similique sehfjb sehjfewhb fbjwehj Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupt, consectetur adipisicing elit. bus nihil itaque earum, similique sehfjb sehjfewhb fbjwehj Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cuping elit. bus nihil itaque earum, similique sehfjb sehjfewhb fbjwehj Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupt, consectetur adipisicing elit. bus nihil itaque earum, similique sehfjb sehjfewhb fbjwehj Lorem ipsum dolor sit amet, consectetur adipisicing eli
+            </p>
+        </div>
+        <div class="container">
+
+            <div class="div1">
+                <i class="fas fa-cloud"></i>
+                <h3>Hritik choudhary</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias iusto dolore reiciendis, natus eos, cumque cum mollitia lkhujhx hruxhwurhh uh uhruw uwhuh abore harum excepturi.</p>
+            </div>
+            <div class="div2">
+                <i class="fas fa-phone"></i>
+                <h3>Lorem ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias iusto dolore reiciendis, natus eos, cumque cum mollitia labore harum excepturixwhdhubhb uhwehjbwebfw jhfwejhjwjhfjhh hehfwuxkj ugeghkj .</p>
+            </div>
+            <div class="div3">
+                <i class="fas fa-ambulance"></i>
+                <h3> Sit amet consectetur.</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias iusto dolore reiciendis, natus eos, cumque cum mollitia labore harum excepturikjeshdfhe esfbhj sbdhvxhnf wefuwehruwxb</p>
+            </div>
+        </div>
+    </div>
+
+    <!--MAIN PAGE END-->
+    <!--INFORMATION PART START-->
+    <div class="information">
+        <div class="text1">
+            <h1>About Our Staff Information</h1>
+            <p>Minus reprehenderit officia ut perspiciatis veritatis aliquid provident! Nobis molestias aut modi eius ullam possimus adtreb hedhe </p>
+        </div>
+        <div class="container1">
+            <div class="div11">
+                <i class="far fa-id-badge"></i>
+                <h3>Hritik Choudhary</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ue, alias quas expedita.</p>
+                <h4>Contact No :-7470957687 </h4>
+            </div>
+            <div class="div12">
+                <i class="fas fa-id-badge"></i>
+                <h3>Aishwariya Tiwari</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ue, alias quas expedita.</p>
+                <h4>Contact No :-7078577687 </h4>
+
+            </div>
+            <div class="div13">
+                <i class="far fa-id-badge"></i>
+                <h3>Tarun Tapani</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ue, alias quas expedita.</p>
+                <h4>Contact No :-9080957687 </h4>
+            </div>
+            <div class="div14">
+                <i class="fas fa-id-badge"></i>
+                <h3>Sushmita Sen</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis ue, alias quas expedita.</p>
+                <h4>Contact No :-8757957687 </h4>
+            </div>
+        </div>
+    </div>
+
+    <!--INFORMATION PART END-->
+    <!--FOOTER PART START-->
+    <div class="footer">
+        <div class="foot">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-google-plus"></i>
+            <i class="fab fa-youtube"></i>
+            <br>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Details</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Help</a></li>
+
+        </div>
+        <div class="foot1">
+            <p> Voluptas fugiat aperiam vitae maxime facilis velit quas incidunt ab cum dolorem.</p>
+
+            <pre>&copy; Copyright-Rajas</pre>
+        </div>
+    </div>
+    <!--FOOTER PART END-->
+    <div class="arrow">
+        <a href=#>
+            <abbr title="Return to Top">
+                <i class="fas fa-arrow-up"></i>
+            </abbr>
+        </a>
+    </div>
+
+</body>
+
+</html>
